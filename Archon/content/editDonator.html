@@ -7,24 +7,24 @@
 	<meta name="description" content="Description" />
 	<!-- css block -->
 	<link rel="stylesheet" type="text/css" href="../html/common.css" />
-	<link rel="stylesheet" type="text/css" href="../../_AXJ/ui/default/AXJ.css" />
-	<link rel="stylesheet" type="text/css" href="../../_AXJ/ui/default/AXInput.css" />
-	<link rel="stylesheet" type="text/css" href="../../_AXJ/ui/default/AXSelect.css" />
-	<link rel="stylesheet" type="text/css" href="../../_AXJ/ui/default/AXButton.css" />
-	<link rel="stylesheet" type="text/css" href="../../_AXJ/ui/default/AXGrid.css" />
-	<link rel="stylesheet" type="text/css" href="../../_AXJ/ui/default/AXSearch.css" >
+	<link rel="stylesheet" type="text/css" href="http://dev.axisj.com/_AXJ/ui/default/AXJ_desktop.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.axisj.com/_AXJ/ui/default/AXInput_desktop.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.axisj.com/_AXJ/ui/default/AXSelect_desktop.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.axisj.com/_AXJ/ui/default/AXButton_desktop.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.axisj.com/_AXJ/ui/default/AXGrid.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.axisj.com/_AXJ/ui/default/AXSearch.css" >
 	<link rel="stylesheet" type="text/css" href="../html/content.css" />
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 	<!-- js block -->
-	<script type="text/javascript" src="../../_AXJ/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="../../_AXJ/lib/AXJ.js"></script>
-	<script type="text/javascript" src="../../_AXJ/lib/AXInput.js"></script>
-	<script type="text/javascript" src="../../_AXJ/lib/AXSelect.js"></script>
-	<script type="text/javascript" src="../../_AXJ/lib/AXGrid.js"></script>
-	<script type="text/javascript" src="../../_AXJ/lib/AXSearch.js"></script>
-	<script type="text/javascript" src="../../_AXJ/lib/AXModal.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/lib/AXJ.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/lib/AXInput.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/lib/AXSelect.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/lib/AXGrid.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/lib/AXSearch.js"></script>
+	<script type="text/javascript" src="http://dev.axisj.com/_AXJ/lib/AXModal.js"></script>
 
 	<script type="text/javascript" src="../html/js/content.js"></script>
 
@@ -74,11 +74,7 @@
 	            debug: true, pars: pars, onsucc: function (res) {
 	                if (res.result == AXUtil.ajaxOkCode) {
 	                    parent.toast.push(res.msg);
-	                    <% if (req.from == 'main') { %>
-							parent.fnObj.grid01.search();
-						<% }else{ %>
-							parent.fnObj.grid.search();
-						<% } %>
+						parent.fnObj.grid.search();
 						parent.myModal.close();
 	                }else if (res.result == "err") {
 	                	parent.toast.push(res.msg);
