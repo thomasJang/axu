@@ -164,7 +164,7 @@
 			    
 			    search: function () {
 			    	var pars = mySearch.getParam();
-			    	
+			    	/*
 			    	var list = [
 			    		{idx:4, donateType:"eul", donatePrice:200000, hpp:"010-xxxx-1234", email:"xxx%40setuh.com", address:"주소불명", regiDate:"2013-09-17 15:22:00", IP:"61.72.190.23", accountCheck:"Y", accountCheckDate:"2013-09-17 15:22:00", donateFeedback:"N", donateFeedbackDate:"", rowseq:4}, 
 			    		{idx:3, donateType:"gap", donatePrice:200000, hpp:"010-xxxx-1234", email:"xxx%40setuh.com", address:"주소불명", regiDate:"2013-09-17 15:22:00", IP:"61.72.190.23", accountCheck:"Y", accountCheckDate:"2013-09-17 15:22:00", donateFeedback:"N", donateFeedbackDate:"", rowseq:4}, 
@@ -172,8 +172,8 @@
 			    		{idx:1, donateType:"gap", donatePrice:200000, hpp:"010-xxxx-1234", email:"xxx%40setuh.com", address:"주소불명", regiDate:"2013-09-17 15:22:00", IP:"61.72.190.23", accountCheck:"Y", accountCheckDate:"2013-09-17 15:22:00", donateFeedback:"N", donateFeedbackDate:"", rowseq:4}
 			    	];
 			    	myGrid.setList(list);
-			    	
-					//myGrid.setList({ ajaxUrl: "셀렉트리스트 URL", ajaxPars: pars }); 서버에서 받아오는 방식으로 구현할때.
+			    	*/
+					myGrid.setList({ ajaxUrl: "loadGrid.php", ajaxPars: "" }); //서버에서 받아오는 방식으로 구현할때.
 					
 					return false;
 			    },
