@@ -173,7 +173,13 @@
 			    	];
 			    	myGrid.setList(list);
 			    	*/
-					myGrid.setList({ ajaxUrl: "loadGrid.php", ajaxPars: "" }); //서버에서 받아오는 방식으로 구현할때.
+					myGrid.setList({
+                        ajaxUrl: "loadGrid.php", ajaxPars: "",
+                        onLoad: function(){
+                            //myGrid.click(1);
+                            myGrid.setFocus(1);
+                        }
+                    }); //서버에서 받아오는 방식으로 구현할때.
 					
 					return false;
 			    },
