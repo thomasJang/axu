@@ -92,6 +92,12 @@
 		transition: 0.6s;
 		transform-style: preserve-3d;
 	}
+    *.front, .back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width:200px;height:350px;
+    }
 
 	.front {
 		z-index: 2;
@@ -121,7 +127,8 @@
 		filter: FlipH(true);
 		-ms-filter: "FlipH";
 	}
-	</style>
+
+    </style>
 	<script type="text/javascript">
 	var fnObj = {
 		pageStart: function(){
@@ -189,7 +196,7 @@
 											<div class="Hspace5"></div>
 											<input id="passwd" type="password" name="passwd" value="" placeholder="비밀번호를 입력하세요" class="AXInput AXInputPlaceHolder" style="width:190px;" />
 											<div class="Hspace5"></div>
-											<input type="submit" value="Login" class="AXButton W180 Green" />
+											<button type="submit" class="AXButton W180 Green">Login</button>
 										</form>
 										<div class="Hspace20"></div>
 										<div style="font-size:10px;color:#717171;font-family:Consolas;">
