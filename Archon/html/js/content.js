@@ -26,7 +26,7 @@
 		]},
 		{label:"메일", addClass:"icon07", subTree:[
 			{programID:"MAILMNG", label:"메일관리", url:"#", target:"_self"},
-			{programID:"SENDMAIL", label:"메일작성", url:"#", target:"_self"},
+			{programID:"SENDMAIL", label:"메일작성", url:"#", target:"_self"}
 		]},
 		{label:"설정관리", addClass:"icon08", subTree:[
 			{programID:"CODE01", label:"코드관리", url:"#", target:"_self"}
