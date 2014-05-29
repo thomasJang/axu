@@ -22,6 +22,7 @@
 @desktop:   ~"only screen and (min-width: 1023px) and (max-width: 1151px)";
 @tablet:    ~"only screen and (min-width: 767px) and (max-width: 1023px)";
 @mobile:	~"(max-width: 767px)";
+@formMobile: ~"(max-width: 500px)";
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans|Nunito);
@@ -97,7 +98,6 @@ a{
 		}
 	}
 }
-
 
 #AXPage{
 
@@ -500,7 +500,7 @@ a{
 	}
 	.ax-modal-body{
 		margin: 0px 10px;
-		min-height:300px;
+		min-height:100px;
 		background:@bgcolor;
 		border:@border-b;
 		.util-border-radius(6px, 6px, 6px, 6px);
@@ -516,6 +516,122 @@ a{
 		}
 		.ax-unit.right{
 			text-align: right;
+		}
+	}
+}
+
+// 반응형 폼 서식
+.ax-rwd-table {
+	position: relative;
+	.item-group {
+		position: relative;
+		min-height: 40px;
+		&.gray {
+			background: #eee;
+			padding: 0px;
+			min-height: 25px;
+			.item {
+
+			}
+		}
+		.item {
+			float: left;
+			line-height: 20px;
+			min-height: 20px;
+			padding: 0px;
+			text-align: center;
+			position: relative;
+			.item-lable {
+				position: relative;
+				display: table-cell;
+				*display: block;
+				*float: left;
+				span.th {
+					display: table-cell;
+					*display: block;
+					*float: left;
+					color: #616161;
+					border-right: @border-b;
+					min-height: 20px;
+					line-height: 20px;
+					padding: 10px 0px;
+					box-sizing: content-box;
+				}
+				span.th.none {
+					border: 0px none;
+				}
+				span.td {
+					display: table-cell;
+					*display: block;
+					*float: left;
+					height: 30px;
+					line-height: auto;
+					padding: 5px 10px;
+					*line-height: 30px;
+					box-sizing: content-box;
+					vertical-align: middle;
+					&.selectBox {
+						*padding-top: 7px;
+						*height: 28px;
+					}
+					&.inputText {
+						*padding-top: 6px;
+						*height: 29px;
+					}
+					&.button {
+						*padding-top: 6px;
+						*height: 29px;
+					}
+					select {
+						box-sizing: border-box;
+						height: 25px;
+						margin: 0px;
+					}
+					input {
+						vertical-align: middle;
+					}
+					label {
+						vertical-align: middle;
+					}
+				}
+			}
+			&.secondItem {
+				.item-lable {
+					span.th {
+						border-left: @border-b
+					}
+				;
+				}
+			}
+			&.rightPadding0 {
+				.item-lable {
+					span.td {
+						padding-right: 0px;
+					}
+				}
+			}
+			&.leftPadding0 {
+				.item-lable {
+					span.td {
+						padding-left: 0px;
+					}
+				}
+			}
+			&.padding0 {
+				.item-lable {
+					span.td {
+						padding: 5px 0px
+					}
+				}
+			}
+		}
+		.group-clear {
+			height: 1px;
+			font-size: 1px;
+			line-height: 1px;
+			height: 1px;
+			background: #e2e2e2;
+			clear: both;
 		}
 	}
 }
@@ -584,7 +700,6 @@ a{
 }
 
 @media @mobile {
-
 	#AXPage{
 
 		.ax-wrap 	{margin:0px auto;}
@@ -687,6 +802,87 @@ a{
 		}
 		.ax-footer{
 			display: none;
+		}
+	}
+}
+
+@media @formMobile {
+	.ax-rwd-table{
+		.item-group{
+			position:relative;
+			min-height:40px;
+			&.gray{
+				background: #eee;
+				padding:0px;
+				min-height:25px;
+				.searchItem{
+
+				}
+			}
+			.item{
+				float:none;
+				line-height:auto;min-height:auto;
+				padding:0px;
+				text-align:left;
+				position:relative;
+				.item-lable{
+					position:relative;
+					display:block;float:left;
+					span.th{
+						display:block;float:none;
+						color:#616161;
+						border:none;
+						padding: 0px;
+						margin: 10px 10px 10px 15px;
+						box-sizing: content-box;
+						text-align:left;font-weight:bold;
+					}
+					span.td{
+						display:block;float:none;
+						height:auto;line-height: auto;
+						padding: 0px;
+						margin: 0px 10px 10px 10px;
+						*line-height: 30px;
+						box-sizing: content-box;
+						vertical-align: middle;
+						text-align:left;
+						select{
+							box-sizing: border-box;
+							height: 25px;margin: 0px;
+						}
+						input{vertical-align: middle;}
+						label{vertical-align: middle;}
+					}
+				}
+				&.secondItem{
+					.item-lable{
+						span.th{border-left:none};
+					}
+				}
+				&.rightPadding0{
+					.item-lable{
+						span.td{padding-right:0px;}
+					}
+				}
+				&.leftPadding0{
+					.item-lable{
+						span.td{padding-left:0px;}
+					}
+				}
+				&.padding0{
+					.item-lable{
+						span.td{padding:5px 0px}
+					}
+				}
+			}
+			.item-clear{
+				clear:both;
+			}
+			.group-clear{
+				font-size:1px;line-height:1px;height:1px;
+				background:#e2e2e2;
+				clear:both;
+			}
 		}
 	}
 

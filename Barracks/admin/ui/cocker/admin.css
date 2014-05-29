@@ -731,7 +731,7 @@ a:hover {
 }
 #AXPage .ax-modal-body {
   margin: 0px 10px;
-  min-height: 300px;
+  min-height: 100px;
   background: #ffffff;
   border: 1px solid #e2e2e2;
   -webkit-border-radius: 6px 6px 6px 6px;
@@ -749,6 +749,99 @@ a:hover {
 }
 #AXPage .ax-modal-footer .ax-unit.right {
   text-align: right;
+}
+.ax-rwd-table {
+  position: relative;
+}
+.ax-rwd-table .item-group {
+  position: relative;
+  min-height: 40px;
+}
+.ax-rwd-table .item-group.gray {
+  background: #eee;
+  padding: 0px;
+  min-height: 25px;
+}
+.ax-rwd-table .item-group .item {
+  float: left;
+  line-height: 20px;
+  min-height: 20px;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+}
+.ax-rwd-table .item-group .item .item-lable {
+  position: relative;
+  display: table-cell;
+  *display: block;
+  *float: left;
+}
+.ax-rwd-table .item-group .item .item-lable span.th {
+  display: table-cell;
+  *display: block;
+  *float: left;
+  color: #616161;
+  border-right: 1px solid #e2e2e2;
+  min-height: 20px;
+  line-height: 20px;
+  padding: 10px 0px;
+  box-sizing: content-box;
+}
+.ax-rwd-table .item-group .item .item-lable span.th.none {
+  border: 0px none;
+}
+.ax-rwd-table .item-group .item .item-lable span.td {
+  display: table-cell;
+  *display: block;
+  *float: left;
+  height: 30px;
+  line-height: auto;
+  padding: 5px 10px;
+  *line-height: 30px;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+.ax-rwd-table .item-group .item .item-lable span.td.selectBox {
+  *padding-top: 7px;
+  *height: 28px;
+}
+.ax-rwd-table .item-group .item .item-lable span.td.inputText {
+  *padding-top: 6px;
+  *height: 29px;
+}
+.ax-rwd-table .item-group .item .item-lable span.td.button {
+  *padding-top: 6px;
+  *height: 29px;
+}
+.ax-rwd-table .item-group .item .item-lable span.td select {
+  box-sizing: border-box;
+  height: 25px;
+  margin: 0px;
+}
+.ax-rwd-table .item-group .item .item-lable span.td input {
+  vertical-align: middle;
+}
+.ax-rwd-table .item-group .item .item-lable span.td label {
+  vertical-align: middle;
+}
+.ax-rwd-table .item-group .item.secondItem .item-lable span.th {
+  border-left: 1px solid #e2e2e2;
+}
+.ax-rwd-table .item-group .item.rightPadding0 .item-lable span.td {
+  padding-right: 0px;
+}
+.ax-rwd-table .item-group .item.leftPadding0 .item-lable span.td {
+  padding-left: 0px;
+}
+.ax-rwd-table .item-group .item.padding0 .item-lable span.td {
+  padding: 5px 0px;
+}
+.ax-rwd-table .item-group .group-clear {
+  font-size: 1px;
+  line-height: 1px;
+  height: 1px;
+  background: #e2e2e2;
+  clear: both;
 }
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
   #AXPage .ax-wrap {
@@ -975,5 +1068,85 @@ a:hover {
   }
   #AXPage .ax-footer {
     display: none;
+  }
+}
+@media (max-width: 500px) {
+  .ax-rwd-table .item-group {
+    position: relative;
+    min-height: 40px;
+  }
+  .ax-rwd-table .item-group.gray {
+    background: #eee;
+    padding: 0px;
+    min-height: 25px;
+  }
+  .ax-rwd-table .item-group .item {
+    float: none;
+    line-height: auto;
+    min-height: auto;
+    padding: 0px;
+    text-align: left;
+    position: relative;
+  }
+  .ax-rwd-table .item-group .item .item-lable {
+    position: relative;
+    display: block;
+    float: left;
+  }
+  .ax-rwd-table .item-group .item .item-lable span.th {
+    display: block;
+    float: none;
+    color: #616161;
+    border: none;
+    padding: 0px;
+    margin: 10px 10px 10px 15px;
+    box-sizing: content-box;
+    text-align: left;
+    font-weight: bold;
+  }
+  .ax-rwd-table .item-group .item .item-lable span.td {
+    display: block;
+    float: none;
+    height: auto;
+    line-height: auto;
+    padding: 0px;
+    margin: 0px 10px 10px 10px;
+    *line-height: 30px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .ax-rwd-table .item-group .item .item-lable span.td select {
+    box-sizing: border-box;
+    height: 25px;
+    margin: 0px;
+  }
+  .ax-rwd-table .item-group .item .item-lable span.td input {
+    vertical-align: middle;
+  }
+  .ax-rwd-table .item-group .item .item-lable span.td label {
+    vertical-align: middle;
+  }
+  .ax-rwd-table .item-group .item.secondItem .item-lable span.th {
+    border-left: none;
+  }
+  .ax-rwd-table .item-group .item.rightPadding0 .item-lable span.td {
+    padding-right: 0px;
+  }
+  .ax-rwd-table .item-group .item.leftPadding0 .item-lable span.td {
+    padding-left: 0px;
+  }
+  .ax-rwd-table .item-group .item.padding0 .item-lable span.td {
+    padding: 5px 0px;
+  }
+  .ax-rwd-table .item-group .item-clear {
+    clear: both;
+  }
+  .ax-rwd-table .item-group .group-clear {
+    font-size: 1px;
+    line-height: 1px;
+    height: 1px;
+    background: #e2e2e2;
+    clear: both;
   }
 }
