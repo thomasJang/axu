@@ -4,9 +4,9 @@
 
 var topMenu_data = [
 	{_id:"m01", label:"대시보드", url:"index.html"},
-	{_id:"m02", label:"컨텐츠페이지", url:"content.html", cn:[
-		{_id:"m0201", label:"서브페이지", url:"content.html"},
-		{_id:"m0202", label:"서브페이지 두번째", url:"content.html", cn:[
+	{_id:"m02", label:"컨텐츠페이지", url:"#ax", cn:[
+		{_id:"m0201", label:"서브페이지", url:"#ax"},
+		{_id:"m0202", label:"서브페이지 두번째", url:"#ax", cn:[
 			{_id:"m020201", label:"서브페이지 1-0", url:"content.html"},
 			{_id:"m020202", label:"서브페이지 1-1", url:"content.html"},
 			{_id:"m020203", label:"서브페이지 1-2", url:"content.html"}
