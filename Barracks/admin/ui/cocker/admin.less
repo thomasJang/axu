@@ -19,8 +19,8 @@
 @border-b	:1px solid #e2e2e2; 	//Box border line Gray
 
 @wide:		~"(min-width:1151px)";
-@desktop:   ~"only screen and (min-width: 1023px) and (max-width: 1151px)";
-@tablet:    ~"only screen and (min-width: 767px) and (max-width: 1023px)";
+@desktop:   ~"only screen and (min-width: 1024px) and (max-width: 1151px)";
+@tablet:    ~"only screen and (min-width: 767px) and (max-width: 1024px)";
 @mobile:	~"(max-width: 767px)";
 @formMobile: ~"(max-width: 500px)";
 
@@ -454,6 +454,8 @@ a{
 			}
 		}
 		.ax-box{
+			width:300px;margin:0px auto;
+
 			h1	{text-align: center; color:@color-a; font-weight: normal;}
 			p	{text-align: center; color:@color; margin:0px;}
 			.ax-input	{
@@ -802,6 +804,13 @@ a{
 		}
 		.ax-footer{
 			display: none;
+		}
+
+		&.login{
+			.ax-box {
+				width: auto;
+				margin: 0px auto;
+			}
 		}
 	}
 }

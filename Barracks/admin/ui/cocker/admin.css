@@ -658,6 +658,10 @@ a:hover {
   margin: 0px 0px 0px 10px;
   padding: 0px;
 }
+#AXPage.login .ax-box {
+  width: 300px;
+  margin: 0px auto;
+}
 #AXPage.login .ax-box h1 {
   text-align: center;
   color: #444444;
@@ -843,7 +847,7 @@ a:hover {
   background: #e2e2e2;
   clear: both;
 }
-@media only screen and (min-width: 767px) and (max-width: 1023px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
   #AXPage .ax-wrap {
     margin: 0px auto;
   }
@@ -1068,6 +1072,10 @@ a:hover {
   }
   #AXPage .ax-footer {
     display: none;
+  }
+  #AXPage.login .ax-box {
+    width: auto;
+    margin: 0px auto;
   }
 }
 @media (max-width: 500px) {
