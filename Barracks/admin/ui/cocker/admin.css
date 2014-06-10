@@ -493,6 +493,7 @@ a:hover {
   left: 0px;
   top: 130px;
   padding-bottom: 50px;
+  z-index: 2000;
 }
 #AXPage .ax-aside .ax-aside-menu-box {
   position: absolute;
@@ -916,14 +917,14 @@ a:hover {
   #AXPage .ax-header .mx-menu-button:focus {
     color: #468ec8;
   }
+  #AXPage .ax-body .ax-title h1 {
+    margin-left: 40px;
+  }
   #AXPage .ax-body .ax-title .expand h1 {
-    margin-left: 0px;
+    margin-left: 40px;
   }
   #AXPage .ax-body .ax-content {
     padding-left: 0px;
-  }
-  #AXPage .ax-aside {
-    display: none;
   }
 }
 @media (max-width: 767px) {
