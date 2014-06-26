@@ -69,11 +69,11 @@
                                 <div class="group-clear"></div>
                             </div>
                             <div class="item-group" style="">
-                                <div class="item">
+                                <div class="item fullWidth">
                                     <label class="item-lable">
                                         <span class="th" style="min-width:100px;">이메일</span>
                                         <span class="td inputText" style="" title="">
-                                            <input type="text" name="email_id" title="" placeholder="" value="" class="AXInput av-email av-required" style="width:150px;" />
+                                            <input type="text" name="email_id" title="" placeholder="" value="" class="AXInput av-email av-required" />
                                         </span>
                                     </label>
                                 </div>

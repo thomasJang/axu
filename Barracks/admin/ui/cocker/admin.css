@@ -777,7 +777,7 @@ a:hover {
 }
 .ax-rwd-table .item-group .item .item-lable {
   position: relative;
-  display: table-cell;
+  display: table-row;
   *display: block;
   *float: left;
 }
@@ -786,11 +786,13 @@ a:hover {
   *display: block;
   *float: left;
   color: #616161;
+  border-left: 1px solid #e2e2e2;
   border-right: 1px solid #e2e2e2;
   min-height: 20px;
   line-height: 20px;
   padding: 10px 0px;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  min-width: 100px;
 }
 .ax-rwd-table .item-group .item .item-lable span.th.none {
   border: 0px none;
@@ -829,8 +831,35 @@ a:hover {
 .ax-rwd-table .item-group .item .item-lable span.td label {
   vertical-align: middle;
 }
-.ax-rwd-table .item-group .item.secondItem .item-lable span.th {
-  border-left: 1px solid #e2e2e2;
+.ax-rwd-table .item-group .item:first-child .item-lable span.th,
+.ax-rwd-table .item-group .item.first-child .item-lable span.th {
+  border-left: none;
+}
+.ax-rwd-table .item-group .item.fullWidth {
+  position: relative;
+  display: table;
+  float: none;
+  clear: both;
+  width: 100%;
+}
+.ax-rwd-table .item-group .item.fullWidth .item-lable {
+  position: relative;
+  display: table-row;
+  float: none;
+  clear: both;
+  width: 100%;
+}
+.ax-rwd-table .item-group .item.fullWidth .item-lable span.th {
+  width: 100px;
+}
+.ax-rwd-table .item-group .item.fullWidth .item-lable input[type=text],
+.ax-rwd-table .item-group .item.fullWidth .item-lable input[type=password],
+.ax-rwd-table .item-group .item.fullWidth .item-lable .AXInput,
+.ax-rwd-table .item-group .item.fullWidth .item-lable select,
+.ax-rwd-table .item-group .item.fullWidth .item-lable textarea {
+  width: 100%;
+  height: 25px;
+  box-sizing: border-box;
 }
 .ax-rwd-table .item-group .item.rightPadding0 .item-lable span.td {
   padding-right: 0px;
