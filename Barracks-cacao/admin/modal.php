@@ -16,10 +16,10 @@
     <meta property="og:site_name" content="Axis of Javascript - axisj.com" />
     <meta property="og:description" id="meta_description" content="Javascript UI Library based on JQuery" />
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://dev.axisj.com/ui/cocker/AXJ.min.css" />
+    <link href="resource/axicon/axicon.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://dev.axisj.com/ui/kakao/AXJ.min.css" />
 
-    <link rel="stylesheet" href="ui/cocker/admin.css" />
+    <link rel="stylesheet" href="ui/cacao/admin.css" />
 
     <script type="text/javascript" src="http://dev.axisj.com/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="http://dev.axisj.com/dist/AXJ.min.js"></script>
