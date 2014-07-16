@@ -41,9 +41,10 @@
     <script type="text/javascript">
     var fnObj = {
         pageStart: function(){
-            fnObj.search.bind();
-            fnObj.grid.bind();
-            fnObj.modal.bind();
+            this.search.bind();
+            this.grid.bind();
+            this.modal.bind();
+            this.bindEvent();
         },
         bindEvent: function(){
             var _this = this;
