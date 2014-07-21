@@ -39,19 +39,25 @@
     </script>
     <script type="text/javascript" src="resource/admin.js"></script>
     <script type="text/javascript">
-    var mySearch = new AXSearch();
-    var myGrid = new AXGrid();
-    var myModal = new AXModal();
-
     var fnObj = {
         pageStart: function(){
-            fnObj.search.bind();
-            fnObj.grid.bind();
-            fnObj.modal.bind();
+            this.search.bind();
+            this.grid.bind();
+            this.modal.bind();
+            this.bindEvent();
+        },
+        bindEvent: function(){
+            var _this = this;
+            axdom("#ax-search-btn-search").bind("click", function(){
+                _this.search.submit();
+            });
         },
         search: {
+            target: new AXSearch(),
+            get: function(){ return this.target },
             bind: function(){
-                mySearch.setConfig({
+                var _this = this;
+                this.target.setConfig({
                     targetID:"page-search-box",
                     theme : "AXSearch",
                     mediaQuery: {
@@ -131,21 +137,19 @@
                         ]}
                     ]
                 });
-
-                axdom("#ax-search-btn-search").bind("click", function(){
-                    fnObj.search.submit();
-                });
             },
             submit: function(){
-                var pars = mySearch.getParam();
+                var pars = this.target.getParam();
                 toast.push("콘솔창에 파라미터 정보를 출력하였습니다.");
                 trace(pars);
             }
         },
         grid: {
+            target: new AXGrid(),
+            get: function(){ return this.target },
             bind: function(){
 
-                myGrid.setConfig({
+                this.target.setConfig({
                     targetID : "page-grid-box",
                     theme : "AXGrid",
                     mediaQuery: {
@@ -193,7 +197,7 @@
                     }
                 });
 
-                myGrid.setList({
+                this.target.setList({
                     ajaxUrl:"data/loadGrid.php", ajaxPars:"param1=1&param2=2", onLoad:function(){
                         //trace(this);
                     }
@@ -201,8 +205,11 @@
             }
         },
         modal: {
+            target: new AXModal(),
+            get: function(){ return this.target },
             bind: function(){
-                myModal.setConfig({
+                window.myModal = this.target;
+                this.target.setConfig({
                     windowID:"myModalContainer",
                     mediaQuery: {
                         mx:{min:0, max:767}, dx:{min:767}
@@ -211,8 +218,7 @@
                 });
             },
             open: function(type, item){
-
-                myModal.open({
+                this.target.open({
                     url:"modal.php",
                     pars:"a=1&b=2&c=3".queryToObject(),
                     top:100, width:600,
