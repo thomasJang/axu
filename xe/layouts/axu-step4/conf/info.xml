@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.2">
+    <title xml:lang="ko">악수 레이아웃(STEP-4)</title>
+    <description xml:lang="ko">
+        XE를 위한 악수 레이아웃입니다.
+        AXISJ에서 만든 반응형 웹 제작 템플릿입니다.
+    </description>
+    <version>1.0</version>
+    <date>2014-07-20</date>
+    <author email_address="jowrney@axisj.com" link="http://axisj.com/">
+        <name xml:lang="ko">Jowrney Kim</name>
+    </author>
+
+	<extra_vars>
+		<var name="logo_img" type="image">
+			<title xml:lang="ko">사이트 로고 이미지</title>
+		</var>
+		<var name="logo_text" type="text">
+			<title xml:lang="ko">사이트 로고 문자</title>
+		</var>
+		<var name="layout_type" type="select">
+			<title xml:lang="ko">레이아웃 유형</title>
+			<options value="main">
+				<title xml:lang="ko">메인 페이지</title>
+			</options>
+			<options value="sub">
+				<title xml:lang="ko">서브 페이지</title>
+			</options>
+		</var>
+	</extra_vars>
+
+    <menus>
+        <menu name="global_menu" maxdepth="2" default="true">
+            <title xml:lang="ko">전역 메뉴</title>
+        </menu>
+    </menus>
+</layout>
+
+
+

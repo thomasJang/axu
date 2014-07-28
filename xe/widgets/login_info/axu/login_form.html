@@ -1,0 +1,34 @@
+<load target="css/axu.css" />
+<load target="./filter/login.xml" />
+<load target="./filter/openid_login.xml" />
+
+<form id="fo_login_widget" action="{getUrl('','act','procMemberLogin')}" method="post" ruleset="@login" class="login_form">
+	<fieldset>
+		<input type="hidden" name="act" value="procMemberLogin" />
+		<input type="hidden" name="success_return_url" value="{htmlspecialchars(getRequestUriByServerEnviroment(), ENT_COMPAT | ENT_HTML401, 'UTF-8', false)}" />
+		<input type="hidden" name="xe_validator_id" value="widgets/login_info/skins/xe_official/login_form/1" />
+        <div class="msg-wrap">
+            <div cond="$XE_VALIDATOR_MESSAGE && $XE_VALIDATOR_ID == 'widgets/login_info/skins/xe_official/login_form/1'" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+            	<p>{$XE_VALIDATOR_MESSAGE}</p>
+            </div>
+        </div>
+		<div class="idpw-wrap">
+			<div class="idpw">
+				<input name="user_id" type="text" title="<!--@if($member_config->identifier != 'email_address')-->{$lang->user_id}<!--@else-->{$lang->email_address}<!--@end-->" />
+				<input name="password" type="password" title="{$lang->password}" />
+
+				<div class="ax-clear"></div>
+			</div>
+			<div class="keep">
+				<input type="checkbox" name="keep_signed" id="keep_signed" value="Y" />
+				<label for="keep_signed">{$lang->keep_signed}</label>
+			</div>
+            <input type="submit" class="btn-login" value="{$lang->cmd_login}" />							
+			
+		</div>
+		<ul class="help">
+			<li><a href="{getUrl('act','dispMemberSignUpForm')}">{$lang->cmd_signup}</a></li>
+			<li><a href="{getUrl('act','dispMemberFindAccount')}">{$lang->cmd_find_member_account}</a></li>
+		</ul>
+	</fieldset>
+</form> 

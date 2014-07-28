@@ -1,0 +1,121 @@
+<load target="http://cdn.axisj.com/axisj/ui/arongi/AXJ.min.css" />
+<load target="http://cdn.axisj.com/axisj/dist/AXJ.min.js" />
+<load target="css/layout.css" />
+
+<div id="AXPage">
+    <div id="AXPageHead">
+        <div class="ax-wrap">
+            <div class="ax-layer">
+            	<h1>로고</h1>
+                <div class="ax-col-12">
+                    <div class="ax-unit">
+                        <div class="logo-box">
+                            <h2>로고</h2>
+                        </div>
+                    </div>    
+                </div>
+                <div class="ax-clear"></div>
+            </div>
+            <div class="ax-layer">
+                <h1>AX상단</h1>
+            	<div class="ax-col-6">
+            	    <div class="ax-unit">
+                        <div class="select-lang">
+                            <h2>언어선택</h2>
+                            <ul>
+                                <li>한국어</li>
+                                <li>English</li>                                
+                                <li>日本語</li>
+                            </ul>
+                        </div>
+            	    </div>    
+            	</div>
+            	<div class="ax-col-6">
+            	    <div class="ax-unit">
+                        <div class="search-box">
+                            <h2>검색</h2>
+                            <input type="text" />
+                        </div>
+                        <div class="login-widget">
+                            <h2>로그인 위젯</h2>
+                            <ul>
+                                <li>회원가입</li>
+                                <li>로그인</li>
+                            </ul>
+                        </div>
+            	    </div>    
+            	</div>
+            	<div class="ax-clear"></div>
+            </div>    
+            <div class="ax-layer">
+                <h1>AX메뉴</h1>
+            	<div class="ax-col-12">
+            	    <div class="ax-unit">
+                        <nav class="nav">
+                	    	<h2>메뉴</h2>
+                	    	<ul>
+                    	    	<li>
+                    	    	    XE소개
+                        	    	<ul>
+                            	    	<li>소개</li>
+                            	    	<li>XE허브</li>                        	    	
+                            	    	<li>이벤트</li>
+                            	    	<li>컨트리뷰터</li>
+                        	    	</ul>
+                    	    	</li>
+                    	    	<li>시작하기</li>
+                    	    	<li>블로그</li>
+                    	    	<li>다운로드</li>                	    	                	    	                	    	
+                    	    	<li>지원</li>
+                    	    	<li>쇼케이스</li>                	    	
+                	    	</ul>	
+                        </nav>
+            	    </div>    
+            	</div>
+            	<div class="ax-clear"></div>
+            </div>    
+        </div>
+    </div>
+    <div id="AXPageVisual">
+        <div class="ax-wrap">
+            <h1>AX비주얼</h1>
+            <div class="ax-layer">
+            	<div class="ax-col-6">
+            	    <div class="ax-unit">
+            			<h2>물고기1</h2>
+            	    </div>
+            	</div>
+            	<div class="ax-col-6">
+            	    <div class="ax-unit">
+            	        <h2>물고기2</h2>
+            	    </div>
+            	</div>
+            	<div class="ax-clear"></div>
+            </div>
+            <div class="ax-layer">
+            	<div class="ax-col-12">
+            	    <div class="ax-unit">
+            	    	<h2>대표내용</h2>	
+            	    </div>    
+            	</div>
+            	<div class="ax-clear"></div>
+            </div>
+        </div>
+    </div>
+    <include target="layout-main.html" cond="$layout_info->layout_type == 'main'" />
+    <include target="layout-sub.html" cond="$layout_info->layout_type == 'sub'" />    
+    <div id="AXPageFoot">
+        <div class="ax-wrap">
+            <div class="ax-layer">
+                <h1>AX하단</h1>
+            	<div class="ax-col-12">
+            	    <div class="ax-unit">
+                        <h2>카피라이트</h2>
+                        2012© Blue Ocean for XpressEngine
+            	    </div>    
+            	</div>
+            	<div class="ax-clear"></div>
+            </div>        
+        </div>
+    </div>
+</div>

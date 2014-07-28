@@ -1,0 +1,97 @@
+@import "../../layouts/axu/css/lessutils";
+@import "../../layouts/axu/css/preset";
+
+
+// s.Default /////////////////////////////////////////////////////// 
+#CXPage{
+    overflow: hidden;
+	.cx-wrap 	{margin:0 auto; width:@dx-width~'\9';} //IE8포함 하위버전 대응
+	.cx-clear	{clear:both;}
+	.cx-unit	{margin:0 10px; }
+	
+	.cx-col		{float:left;}		
+	div[class*="cx-col-"] {float:left; height: inherit; }
+	.cx-col-1	{width:8.3334%;}	
+	.cx-col-2	{width:16.6667%}		
+	.cx-col-3	{width:25%}			
+	.cx-col-4	{width:33.3334%; }
+	.cx-col-5 	{width:41.6667%;}
+	.cx-col-6	{width:50%;}
+	.cx-col-7	{width:58.3334%}
+	.cx-col-8	{width:66.6667%}
+	.cx-col-9	{width:75%;}
+	.cx-col-10 	{width:83.3334%}
+	.cx-col-11	{width:91.6667%}
+	.cx-col-12	{width:100%}	
+	
+	div[class*="mx-"] {display: none;}
+	
+	&.main{
+    	.feature-box{ //ul
+            list-style:none; margin:0px; padding:0px;
+            margin:20px;
+    	    li{
+                text-align: center;
+        	    &.icon{
+                    font-size:60px;   
+                    color:@color;
+        	    }
+        	    &.title{
+            	    font-size:18px;
+            	    color:@color;
+                    padding-bottom:10px;
+        	    }
+        	    &.desc{
+            	    text-align: left;
+            	    line-height: 1.6;
+        	    }
+    	    }
+        	
+    	}
+	}
+	
+}
+// e.Default /////////////////////////////////////////////////////// 
+
+
+// s.Wide /////////////////////////////////////////////////////// 
+@media @wide {
+	.cx-wrap {width:@wx-width}
+}
+// e.Wide /////////////////////////////////////////////////////// 
+
+
+// s.Desktop /////////////////////////////////////////////////////// 
+@media @desktop {
+	.cx-wrap {width:@dx-width}
+}
+// e.Desktop /////////////////////////////////////////////////////// 
+
+// s.Mobile /////////////////////////////////////////////////////// 
+@media @mobile, @tablet {
+
+#CXPage{
+	.cx-wrap 	{margin:0 auto; width:@mx-width; }
+	.cx-clear	{clear:both;}
+	.cx-unit	{margin:0 10px; }
+	
+	.cx-col		{float:left;}		
+	div[class*="cx-col-"] {float:left; height: inherit;}
+	.cx-col-1	{width:100%;}	
+	.cx-col-2	{width:100%;}		
+	.cx-col-3	{width:100%;}			
+	.cx-col-4	{width:100%;}
+	.cx-col-5 	{width:100%;}
+	.cx-col-6	{width:100%;}
+	.cx-col-7	{width:100%;}
+	.cx-col-8	{width:100%;}
+	.cx-col-9	{width:100%;}
+	.cx-col-10 	{width:100%;}
+	.cx-col-11	{width:100%;}
+	.cx-col-12	{width:100%;}	
+
+	div[class*="mx-"] {display: block;} 
+
+}
+}
+// e.Mobile /////////////////////////////////////////////////////// 
