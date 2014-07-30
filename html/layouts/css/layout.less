@@ -1,0 +1,98 @@
+@import (less) "./AXUtils.less";
+@import (less) "./preset.less";
+@import url("./ax-rwd-table.css");
+
+// s.Default /////////////////////////////////////////////////////// 
+#AXPage{
+
+	.ax-wrap 	{margin:0 auto; }
+	.ax-clear	{clear:both;}
+	.ax-unit	{margin:0 10px; }
+	
+	.ax-col		{float:left;}		
+	div[class*="ax-col-"] {float:left; height: inherit;}
+	.ax-col-1	{width:8.3334%;}	
+	.ax-col-2	{width:16.6667%}		
+	.ax-col-3	{width:25%}			
+	.ax-col-4	{width:33.3334%; }
+	.ax-col-5 	{width:41.6667%;}
+	.ax-col-6	{width:50%;}
+	.ax-col-7	{width:58.3334%}
+	.ax-col-8	{width:66.6667%}
+	.ax-col-9	{width:75%;}
+	.ax-col-10 	{width:83.3334%}
+	.ax-col-11	{width:91.6667%}
+	.ax-col-12	{width:100%}
+	
+	div[class*="mx-"] {display: none;}
+}
+// e.Default /////////////////////////////////////////////////////// 
+
+
+// s.Wide /////////////////////////////////////////////////////// 
+@media @wide {
+	.ax-wrap {width:@wx-width}
+}
+// e.Wide /////////////////////////////////////////////////////// 
+
+
+// s.Desktop /////////////////////////////////////////////////////// 
+@media @desktop {
+	.ax-wrap {width:@dx-width}
+}
+// e.Desktop /////////////////////////////////////////////////////// 
+
+// s.Tablet /////////////////////////////////////////////////////// 
+@media @tablet{
+	#AXPage{
+		.ax-wrap 	{margin:0 auto; width:@tx-width }
+		.ax-clear	{clear:both;}
+		.ax-unit	{margin:0 10px; }
+
+		.ax-col		{float:left;}
+		div[class*="ax-col-"] {float:left; height: inherit;}
+		.ax-col-1	{width:100%}
+		.ax-col-2	{width:100%}
+		.ax-col-3	{width:100%}
+		.ax-col-4	{width:100%;}
+		.ax-col-5 	{width:100%}
+		.ax-col-6	{width:100%;}
+		.ax-col-7	{width:100%;}
+		.ax-col-8	{width:100%;}
+		.ax-col-9	{width:100%;}
+		.ax-col-10 	{width:100%;}
+		.ax-col-11	{width:100%;}
+		.ax-col-12	{width:100%;}
+
+		div[class*="mx-"] {display: block;}
+	}
+}
+// e.Tablet /////////////////////////////////////////////////////// 
+
+// s.Mobile /////////////////////////////////////////////////////// 
+@media @mobile, @tablet {
+
+	#AXPage{
+		.ax-wrap 	{margin:0 auto; width:@mx-width }
+		.ax-clear	{clear:both;}
+		.ax-unit	{margin:0 10px; }
+
+		.ax-col		{float:left;}
+		div[class*="ax-col-"] {float:left; height: inherit;}
+		.ax-col-1	{width:100%}
+		.ax-col-2	{width:100%}
+		.ax-col-3	{width:100%}
+		.ax-col-4	{width:100%;}
+		.ax-col-5 	{width:100%}
+		.ax-col-6	{width:100%;}
+		.ax-col-7	{width:100%;}
+		.ax-col-8	{width:100%;}
+		.ax-col-9	{width:100%;}
+		.ax-col-10 	{width:100%;}
+		.ax-col-11	{width:100%;}
+		.ax-col-12	{width:100%;}
+
+		div[class*="mx-"] {display: block;}
+	}
+}
+// e.Mobile /////////////////////////////////////////////////////// 
