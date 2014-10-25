@@ -20,13 +20,13 @@ var topMenu_data = [
 	{_id:"m07", label:"접속통계", url:"content.html"}
 ];
 var sideMenu_data = [
-	{label:'<i class="fa fa-windows"></i> 대시보드', url:"index.html", target:"_self"},
-	{label:'<i class="fa fa-asterisk"></i> 관리자설정', url:"content.html", target:"_self"},
-	{label:'<i class="fa fa-columns"></i> 레이아웃', url:"content.html", target:"_self"},
-	{label:'<i class="fa fa-pagelines"></i> 페이지', url:"content.html", target:"_self"},
-	{label:'<i class="fa fa-sitemap"></i> 사이트맵', url:"content.html", target:"_self"},
-	{label:'<i class="fa fa-archive"></i> 모듈', url:"content.html", target:"_self"},
-	{label:'<i class="fa fa-bar-chart-o"></i> 접속통계', url:"content.html", target:"_self"}
+	{label:'<i class="axi axi-windows"></i> 대시보드', url:"index.html", target:"_self"},
+	{label:'<i class="axi axi-asterisk"></i> 관리자설정', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-columns"></i> 레이아웃', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-pagelines"></i> 페이지', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-sitemap"></i> 사이트맵', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-archive"></i> 모듈', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-bar-chart-o"></i> 접속통계', url:"content.html", target:"_self"}
 ];
 
 var topMenu = new AXTopDownMenu();

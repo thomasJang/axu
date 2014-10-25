@@ -17,7 +17,9 @@
     <meta property="og:description" id="meta_description" content="Javascript UI Library based on JQuery" />
 
     <link rel="stylesheet" href="ui/cocker/admin.css" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ui/custom.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://cdn.axisj.com/axicon/axicon.min.css" />
     <link rel="stylesheet" type="text/css" href="http://dev.axisj.com/ui/cocker/AXJ.min.css" />
 
     <script type="text/javascript" src="http://dev.axisj.com/jquery/jquery.min.js"></script>
@@ -33,6 +35,8 @@
                 else jQuery(this).parent().addClass("checked");
             });
 
+            toast.push({type:"Caution", body:"본 페이지는 샘플페이지 입니다. 그냥 '로그인'버튼을 누르세요"});
+
         }
     };
     jQuery(document).ready(fnObj.pageStart.delay(0.1));
@@ -47,7 +51,7 @@
 
 			<div class="ax-layer ax-title">
 				<div class="ax-col-12">
-					<h1>관리자</h1>
+					<h1><i class="axi axi-axu"></i></h1>
 					<p class="desc">Application eXperience Universal Administrator</p>
 				</div>
                 <div class="ax-clear"></div>
@@ -86,7 +90,8 @@
 							<div class="H20"></div>
 
 							<div class="ax-opts">
-								<button type="button" class="AXButtonLarge Green">관리자에게 계정 신청하기</button>
+								<button type="button" class="AXButtonSmall Classic">관리자에게 계정 신청하기</button>
+                                <button type="button" class="AXButtonSmall Classic">비밀번호 찾기</button>
 							</div>
 
                             <p>
