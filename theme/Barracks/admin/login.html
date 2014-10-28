@@ -20,23 +20,24 @@
     <link rel="stylesheet" href="ui/custom.css" />
 
     <link rel="stylesheet" type="text/css" href="http://cdn.axisj.com/axicon/axicon.min.css" />
-    <link rel="stylesheet" type="text/css" href="http://dev.axisj.com/ui/cocker/AXJ.min.css" />
-
-    <script type="text/javascript" src="http://dev.axisj.com/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="http://dev.axisj.com/dist/AXJ.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="http://cdn.axisj.com/axisj/ui/cocker/AXJ.min.css" />
+    <script type="text/javascript" src="http://cdn.axisj.com/axisj/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.axisj.com/axisj/dist/AXJ.min.js"></script>
     <script>
     var fnObj = {
         pageStart: function(){
-
+            /*
             jQuery(".AXCheckbox").find("input").bind("click", function(){
                 if(this.checked)this.checked = true;else this.checked = false;
                 if(jQuery(this).parent().hasClass("checked")) jQuery(this).parent().removeClass("checked");
                 else jQuery(this).parent().addClass("checked");
             });
-
+            */
+            $("#AXInputSwitch").bindSwitch({off:"NO", on:"YES", onChange:function(){
+                toast.push(Object.toJSON({targetID:this.targetID,
+                    on:this.on, off:this.off, value:this.value}));
+            }});
             toast.push({type:"Caution", body:"본 페이지는 샘플페이지 입니다. 그냥 '로그인'버튼을 누르세요"});
-
         }
     };
     jQuery(document).ready(fnObj.pageStart.delay(0.1));
@@ -79,8 +80,10 @@
                                 <div class="H20"></div>
 
                                 <div class="ax-funcs">
-                                    <label class="AXCheckbox" for="mycheck0">
-                                        <input type="checkbox" name="mycheck" value="T1" id="mycheck0" /><span>로그인 기억하기</span>
+                                    <label>
+                                        <span>&nbsp;아이디 기억하기</span>
+                                        <input type="text" name="" value="NO" id="AXInputSwitch" style="width:50px;height:23px;border:0px none;" />
+
                                     </label>
                                     <button type="submit" class="AXButtonLarge Blue">&nbsp;&nbsp;로그인&nbsp;&nbsp;</button>
                                 </div>

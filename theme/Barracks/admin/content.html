@@ -79,14 +79,14 @@
                                 ],
                                 onChange: function(selectedObject, value){
                                     //아래 3개의 값을 사용 하실 수 있습니다.
-                                    dialog.push(Object.toJSON(this));
-                                    dialog.push(Object.toJSON(selectedObject));
-                                    dialog.push(value);
+                                    trace(this);
+                                    trace(selectedObject);
+                                    toast.push(value);
                                 }
                             }
                         ]},
                         {display:true, addClass:"", style:"", list:[
-                            {label:"검색어", labelWidth:"100", type:"selectBox", width:"", key:"selectbox", addClass:"", valueBoxStyle:"", value:"close",
+                            {label:"사원명", labelWidth:"100", type:"selectBox", width:"", key:"selectbox", addClass:"", valueBoxStyle:"", value:"close",
                                 options:[{optionValue:"all", optionText:"전체보기"}, {optionValue:"open", optionText:"공개"}, {optionValue:"close", optionText:"비공개"}],
                                 AXBind:{
                                     type:"select", config:{
@@ -100,8 +100,17 @@
                             {label:"", labelWidth:"", type:"inputText", width:"150", key:"inputText", addClass:"secondItem", valueBoxStyle:"padding-left:0px;", value:"ABCD",
                                 onChange: function(changedValue){
                                     //아래 2개의 값을 사용 하실 수 있습니다.
-                                    dialog.push(Object.toJSON(this));
+                                    toast.push(Object.toJSON(this));
                                     //dialog.push(changedValue);
+                                }
+                            },
+                            {label:"", type:"button", width:"40", key:"button", addClass:"Green", valueBoxStyle:"padding-left:0px;", value:"찾기",
+                                onclick: function(){
+                                    // 찾기 모달 열기
+                                    fnObj.modal.open("memberFinder", {
+                                        url:"modal-tree.php", pars:"",
+                                        width:400
+                                    });
                                 }
                             }
                         ]},
@@ -110,18 +119,18 @@
                                 options:[{optionValue:"all", optionText:"전체보기", title:"체크박스"}, {optionValue:"open", optionText:"공개"}, {optionValue:"close", optionText:"비공개"}],
                                 onChange: function(selectedObject, value){
                                     //아래 3개의 값을 사용 하실 수 있습니다.
-                                    dialog.push(Object.toJSON(this));
-                                    dialog.push(Object.toJSON(selectedObject));
-                                    dialog.push(value);
+                                    trace(this);
+                                    trace(selectedObject);
+                                    toast.push(value);
                                 }
                             },
                             {label:"라디오류", labelWidth:"100", type:"radioBox", width:"", key:"radiobox", addClass:"secondItem", valueBoxStyle:"", value:"close",
                                 options:[{optionValue:"all", optionText:"전체보기", title:"라디오타이틀"}, {optionValue:"open", optionText:"공개"}, {optionValue:"close", optionText:"비공개"}],
                                 onChange: function(selectedObject, value){
                                     //아래 3개의 값을 사용 하실 수 있습니다.
-                                    dialog.push(Object.toJSON(this));
-                                    dialog.push(Object.toJSON(selectedObject));
-                                    dialog.push(value);
+                                    trace(this);
+                                    trace(selectedObject);
+                                    toast.push(value);
                                 }
                             }
                         ]},
@@ -186,7 +195,9 @@
                             //toast.push(Object.toJSON({index:this.index, item:this.item}));
                             //alert(this.list);
                             //alert(this.page);
-                            fnObj.modal.open("gridView", this.item);
+                            fnObj.modal.open("gridView", {
+                                url:"modal.php", pars:"no=" + this.item.no
+                            });
                         }
                     },
                     page:{
@@ -217,12 +228,13 @@
                     displayLoading:true
                 });
             },
-            open: function(type, item){
+            open: function(type, http){
                 this.target.open({
-                    url:"modal.php",
-                    pars:"a=1&b=2&c=3".queryToObject(),
-                    top:100, width:600,
-                    closeByEscKey:true
+                    url: http.url,
+                    pars: http.pars.queryToObject(),
+                    top: ( (typeof http.top == "undefined") ? 100 : http.top ),
+                    width: ( (typeof http.width == "undefined") ? 900 : http.width ),
+                    closeByEscKey: true
                 });
             }
         }
@@ -273,7 +285,7 @@
 		<div class="ax-wrap">
 			<div class="ax-layer ax-title">
 				<div class="ax-col-12 ax-content">
-					<h1>컨텐츠 제목</h1>
+					<h1>페이지 제목</h1>
 					<p class="desc">컨텐츠 상세 설명을 넣어주세요.</p>
 				</div>
                 <div class="ax-clear"></div>

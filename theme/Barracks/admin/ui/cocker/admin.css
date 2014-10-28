@@ -219,7 +219,7 @@ a:hover {
   margin-top: 0px;
 }
 #AXPage .ax-header .ax-top-menu {
-  padding-left: 200px;
+  padding-left: 100px;
   height: 60px;
   width: 500px;
 }
@@ -880,7 +880,7 @@ a:hover {
   box-sizing: content-box;
   vertical-align: middle;
   text-align: left;
-  min-width: 320px;
+  min-width: 280px;
 }
 .ax-rwd-table .item-group .item .item-lable span.td.selectBox {
   *padding-top: 7px;
