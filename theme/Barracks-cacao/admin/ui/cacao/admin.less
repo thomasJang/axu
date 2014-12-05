@@ -1,3 +1,5 @@
+// barracks-cacao v0.1
+
 @import "AXUtils";
 
 // Global Preset //////////////////
@@ -740,6 +742,54 @@ a{
 	}
 }
 
+
+// 공통 클래스 적합 대상들
+table.ax-layout{
+	border-collapse:collapse;
+	border:0px none;
+	width:100%;table-layout:fixed;
+	td, th{
+		padding:0px;
+		.tdRel{position: relative;}
+	}
+	tbody{
+		td, th{
+			min-height:25px;overflow:visible;
+			border:0px none;
+		}
+		tr{
+			&.gray{th,td{background-color:#F5F5F5;}}
+			&.red{th,td{background-color:#FFE8E8;}}
+			&.green{th,td{background-color:#F7FDEA;}}
+			&.blue{th,td{background-color:#EAF5FD;}}
+			&.yellow{th,td{background-color:#FEFEE9;}}
+			td{
+				&.gray{background-color:#F5F5F5;}
+				&.red{background-color:#FFE8E8;}
+				&.green{background-color:#F7FDEA;}
+				&.blue{background-color:#EAF5FD;}
+				&.yellow{background-color:#FEFEE9;}
+			}
+		}
+	}
+	&.padding10{
+		border-spacing: 10px;
+		border-collapse: separate;
+	}
+	&.padding5{
+		border-spacing: 5px;
+		border-collapse: separate;
+	}
+	&.padding15{
+		border-spacing: 15px;
+		border-collapse: separate;
+	}
+	&.padding20{
+		border-spacing: 20px;
+		border-collapse: separate;
+	}
+}
+
 @media @wide {
 }
 
@@ -802,9 +852,18 @@ a{
 				padding-left:0px;
 			}
 		}
-        .ax-aside{
-			
-        }
+		.ax-aside{
+			height:0px;
+			padding-bottom: 0px;
+
+			.ax-aside-box{
+				background: #fff;
+				padding: 10px 0px;
+				border: @border;
+				border-radius: 5px;
+				.util-drop-shadow();
+			}
+		}
 	}
 
 }
@@ -924,6 +983,11 @@ a{
 				.ax-aside-menu-box{
 					display:none;
 				}
+			}
+			.ax-aside-box{
+				background: #fff;
+				padding: 10px;
+				border-bottom: @border;
 			}
 		}
 
