@@ -208,7 +208,7 @@ var fcObj = {
 		},
 		change: function(theme){
 			jQuery("#axu-theme-admin").attr("href", "ui/"+theme+"/admin.css");
-			jQuery("#axu-theme-axisj").attr("href", "http://cdn.axisj.com/axisj/ui/"+ theme.replace("cacao", "kakao") +"/AXJ.min.css");
+			jQuery("#axu-theme-axisj").attr("href", "http://cdno.axisj.com/axisj/ui/"+ theme.replace("cacao", "kakao") +"/AXJ.min.css?v="+axf.timekey());
 			axf.setCookie("axutheme", theme);
 		}
 	}
