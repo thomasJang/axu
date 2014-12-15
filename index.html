@@ -7,20 +7,39 @@
     <meta property="og:site_name" content="Axis of Javascript - axisj.com" /> 
     <meta property="og:description" id="meta_description" content="Javascript UI Library based on JQuery" />
 	
-	<title>AXISJ</title>
+	<title>AXU</title>
 	<!-- css block -->
     <link rel="stylesheet" type="text/css" href="http://dev.axisj.com/ui/arongi/AXJ.min.css" />
 	<style type="text/css">
 		body{padding:10px;font-family:consolas;}
-		a{font-size:14px;padding:5px 10px;display:inline-block;font-family:consolas;text-decoration:none;}
+		h1{font-size: 3em;color: #335997;}
+		h2{color: #666;}
+
+		p{color: #444;}
+		a{font-size:14px;padding:5%;display:inline-block;font-family:consolas;text-decoration:none;}
 		a:hover{text-decoration:underline;background:#eee;}
 		.sampleLink{color:#000;}
-		.bookmark{background:url(_AXJ/ui/icon/new.png) no-repeat 100% 0px;}
-		.new{background:url(_AXJ/ui/icon/new.png) no-repeat 100% 0px;}
-		.alpha{color:#666;}
 		li.line{
 			display:block;
 			height:20px;
+		}
+		.theme-item{
+			display: block;
+			float: left;
+			width: 40%;
+			margin: 0%;
+		}
+		.theme-item h3 {
+			font-size: 2em;
+			color: #335997;
+		}
+		@media screen and (max-width: 760px) {
+			.theme-item{
+				display: block;
+				float: none;
+				width: 100%;
+				margin: 0%;
+			}
 		}
 	</style>
 	<!-- css block -->
@@ -40,50 +59,35 @@
 	
 </head>
 <body>
-						
-	<div style="">
-        <img src="http://dev.axisj.com/samples/_img/axisj_sns.png" align="middle" alt="" />
-		<p style="padding-left:10px;font-size:20px;">AXU</p>
 
+	<div style="text-align: center;margin:0px 5%;">
+		<h1>AXU(악수)</h1>
+		<h2>반응형 웹 애플리케이션 템플릿 패키지</h2>
+		<p>악수(AXU)는 반응형 웹 애플리케이션을 제작하는 방법론과 템플릿을 제공합니다.
+			자바스크립트 UI 프레임워크 액시스제이와 함께라면 더욱 강력한 프론트엔드 화면을 구축할 수 있습니다.
+			서로 악수하며 더 나은 웹 애플리케이션을 위해 도전하십시오</p>
+		<ul>
 	</div>
-	<ul>
-		<li><a href="theme/Archon/index.html" target="_blank" class="sampleLink">Archon for admin</a></li>
-        <li><a href="theme/Barracks/index.html" target="_blank" class="sampleLink">Barracks for admin</a></li>
-        <li><a href="theme/Barracks-cacao/index.html" target="_blank" class="sampleLink">Barracks for admin(cacao)</a></li>
-		<li class="line"></li>
 
-	</ul>
-
-
-    <div class="AXHspace50"></div>
-	<div style="padding:10px 5px;">Upadte : 2014-05-24</div>
-	
-	<div class="Hspace20"></div>
-	
-	<div id="fb-root"></div>
-	<script>
-	  window.fbAsyncInit = function() {
-	    // init the FB JS SDK
-	    FB.init({
-			appId      : '445502418897675',                        // App ID from the app dashboard
-			channelUrl : 'http://www.axisj.com', // Channel file for x-domain comms
-			status     : true,                                 // Check Facebook Login status
-			xfbml      : true                                  // Look for social plugins on the page
-	    });
-	  };
-	
-	  // Load the SDK asynchronously
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/ko_KR/all.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
-	
-	<div style="padding-left:10px;">
-		<div class="fb-like" data-href="https://www.facebook.com/axisj" data-width="280" data-show-faces="true" data-send="true" data-font="segoe ui"></div>
+	<div style="text-align: center;margin:0px 5%;">
+		<a href="theme/Archon/index.html" target="_blank" class="theme-item">
+			<h3>Archon</h3>
+			<img src="resource/images/archon.jpg" width="100%" />
+		</a>
+		<a href="theme/Barracks-cacao/index.html" target="_blank" class="theme-item">
+			<h3>Barracks(kakao)</h3>
+			<img src="resource/images/barracks-kakao.jpg" width="100%" />
+		</a>
+		<a href="theme/Barracks/index.html" target="_blank" class="theme-item">
+			<h3>Barracks(cocker)</h3>
+			<img src="resource/images/barracks-cocker.jpg" width="100%" />
+		</a>
+		<a href="theme/Barracks-2/index.html" target="_blank" class="theme-item">
+			<h3>Barracks(2)</h3>
+			<img src="resource/images/barracks-2.jpg" width="100%" />
+		</a>
 	</div>
+
+
 </body>
 </html>
