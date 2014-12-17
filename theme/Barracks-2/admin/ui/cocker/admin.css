@@ -503,8 +503,12 @@ a:hover {
 #AXPage .ax-body .ax-box .ax-button-group .right {
   float: right;
 }
-#AXPage .ax-body .ax-box .ax-grid {
+#AXPage .ax-body .ax-box .ax-grid,
+#AXPage .ax-body .ax-box .ax-tree,
+#AXPage .ax-body .ax-box .ax-form,
+#AXPage .ax-body .ax-box .ax-section {
   margin: 10px;
+  padding: 0px;
 }
 #AXPage .ax-body .ax-content {
   float: none;
@@ -1278,7 +1282,10 @@ table.ax-layout.padding20 {
   #AXPage .ax-body .ax-box .ax-button-group {
     margin: 10px 3px;
   }
-  #AXPage .ax-body .ax-box .ax-grid {
+  #AXPage .ax-body .ax-box .ax-grid,
+  #AXPage .ax-body .ax-box .ax-tree,
+  #AXPage .ax-body .ax-box .ax-form,
+  #AXPage .ax-body .ax-box .ax-section {
     margin: 10px 3px 3px 3px;
   }
   #AXPage .ax-aside {

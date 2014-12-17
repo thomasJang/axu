@@ -26,7 +26,7 @@ var topMenu_data = [
 			{_id:"m030303", label:"배송관리 서브 A > E", url:"content-1.html"}
 		]}
 	]},
-	{_id:"m04", label:"정산관리", url:"content.html"},
+	{_id:"m04", label:"정산관리", url:"content-2.html"},
 	{_id:"m05", label:"판매자 정보 관리", url:"content.html"},
 	{_id:"m06", label:"공지사항", url:"content.html"},
 	{_id:"m07", label:"통계", url:"content.html"}
@@ -208,7 +208,7 @@ var fcObj = {
 		},
 		change: function(theme){
 			jQuery("#axu-theme-admin").attr("href", "ui/"+theme+"/admin.css");
-			jQuery("#axu-theme-axisj").attr("href", "http://cdno.axisj.com/axisj/ui/"+ theme.replace("cacao", "kakao") +"/AXJ.min.css?v="+axf.timekey());
+			jQuery("#axu-theme-axisj").attr("href", "http://cdn.axisj.com/axisj/ui/"+ theme.replace("cacao", "kakao") +"/AXJ.min.css?v="+axf.timekey());
 			axf.setCookie("axutheme", theme);
 		}
 	}

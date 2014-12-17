@@ -1,28 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <!-- META -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <!-- TITLE -->
-    <title>Barracks</title>
+
+    <title>Barracks-2</title>
 
     <link rel="shortcut icon" href="http://dev.axisj.com/ui/axisj.ico" type="image/x-icon" />
     <link rel="icon" href="http://dev.axisj.com/ui/axisj.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dev.axisj.com/ui/AXJ.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://dev.axisj.com/ui/AXJ.png" />
-    <meta property="og:image" content="http://dev.axisj.com/samples/_img/axisj_sns.png" />
-    <meta property="og:site_name" content="Axis of Javascript - axisj.com" />
-    <meta property="og:description" id="meta_description" content="Javascript UI Library based on JQuery" />
 
-    <link href="resource/axicon/axicon.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="http://dev.axisj.com/ui/kakao/AXJ.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.axisj.com/axicon/axicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.axisj.com/axisj/ui/kakao/AXJ.min.css" id="axu-theme-axisj" />
 
-    <link rel="stylesheet" href="ui/cacao/admin.css" />
+    <script type="text/javascript" src="http://cdn.axisj.com/axisj/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.axisj.com/axisj/dist/AXJ.min.js"></script>
 
-    <script type="text/javascript" src="http://dev.axisj.com/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="http://dev.axisj.com/dist/AXJ.min.js"></script>
+    <link rel="stylesheet" href="ui/cacao/admin.css" id="axu-theme-admin" />
+    <link rel="stylesheet" href="ui/custom.css" />
 
 	<script type="text/javascript">
 	var fnObj = {
@@ -53,8 +48,7 @@
             <div class="ax-layer">
                 <div class="ax-col-12">
 
-
-                    <form name="table-form" method="get" onsubmit="return fnObj.login();">
+                    <form name="table-form" method="get" onsubmit="return false;">
                         <div class="ax-rwd-table">
                             <div class="item-group" style="">
                                 <div class="item">

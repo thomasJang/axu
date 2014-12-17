@@ -455,6 +455,17 @@ a:hover {
   font-size: 14px;
   float: right;
 }
+#AXPage .ax-body .ax-box h2 {
+  font-size: 16px;
+  color: #523636;
+  font-weight: normal;
+  margin: 15px 10px 10px 10px;
+  padding: 0px 0px;
+}
+#AXPage .ax-body .ax-box h2 .more {
+  font-size: 14px;
+  float: right;
+}
 #AXPage .ax-body .ax-box p {
   font-size: 12px;
   line-height: 1.6em;
@@ -507,8 +518,12 @@ a:hover {
 #AXPage .ax-body .ax-box .ax-button-group .right {
   float: right;
 }
-#AXPage .ax-body .ax-box .ax-grid {
+#AXPage .ax-body .ax-box .ax-grid,
+#AXPage .ax-body .ax-box .ax-tree,
+#AXPage .ax-body .ax-box .ax-form,
+#AXPage .ax-body .ax-box .ax-section {
   margin: 10px;
+  padding: 0px;
 }
 #AXPage .ax-body .ax-content {
   float: none;
@@ -1291,7 +1306,10 @@ table.ax-layout.padding20 {
   #AXPage .ax-body .ax-box .ax-button-group {
     margin: 10px 3px;
   }
-  #AXPage .ax-body .ax-box .ax-grid {
+  #AXPage .ax-body .ax-box .ax-grid,
+  #AXPage .ax-body .ax-box .ax-tree,
+  #AXPage .ax-body .ax-box .ax-form,
+  #AXPage .ax-body .ax-box .ax-section {
     margin: 10px 3px 3px 3px;
   }
   #AXPage .ax-aside {

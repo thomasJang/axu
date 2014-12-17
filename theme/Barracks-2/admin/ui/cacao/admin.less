@@ -306,6 +306,13 @@ a{
                 float: right;
               }
             }
+            h2{
+              font-size:16px; color:@color-b; font-weight: normal; margin:15px 10px 10px 10px; padding:0px 0px;
+              .more		{
+                font-size: 14px;
+                float: right;
+              }
+            }
             p{font-size:12px; line-height:1.6em;color:@color-a; font-weight: normal; margin:10px 0px; padding:0px;}
 
             &.sample-01{
@@ -351,8 +358,8 @@ a{
               .right{float: right;}
             }
             /* 페이지 그리드 */
-            .ax-grid{
-              margin: 10px;
+            .ax-grid, .ax-tree, .ax-form, .ax-section{
+              margin: 10px;padding:0px;
             }
 
 		}
@@ -974,7 +981,7 @@ table.ax-layout{
                 margin: 10px 3px;
               }
               /* 페이지 그리드 */
-              .ax-grid {
+              .ax-grid, .ax-tree, .ax-form, .ax-section{
                 margin: 10px 3px 3px 3px;
               }
             }
