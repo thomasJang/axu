@@ -1,5 +1,6 @@
 /**
- * Created by tom on 2014. 5. 19..
+ * Barracks-2 v0.2
+ * 2014.12.26 tom : mobile > ax-scroll-top 추가
  */
 
 var topMenu_data = [
@@ -214,9 +215,14 @@ var fcObj = {
 	}
 };
 
-jQuery(document).ready(function() {
+jQuery(document.body).ready(function() {
 	fcObj.pageStart()
 });
 jQuery(window).resize(function() {
 	fcObj.pageResize();
+});
+
+// 2014-12-26 AXU, admin.js add script
+jQuery(document.body).ready(function() {
+	jQuery(document.body).append('<div class="ax-scroll-top"><a href="javascript:window.scroll(0, 0);"><i class="axi axi-ion-arrow-up-c"></i> TOP</a></div>');
 });

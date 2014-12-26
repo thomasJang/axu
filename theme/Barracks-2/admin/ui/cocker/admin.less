@@ -1,4 +1,7 @@
-// barracks-cocker v0.1
+/*
+ * barracks-cocker v0.2
+ * 2014.12.26 tom : mobile > ax-scroll-top 추가
+ */
 
 @import "../AXUtils";
 
@@ -882,7 +885,6 @@ table.ax-layout{
 @media @mobile {
 
 	#AXPage{
-
 		.ax-wrap 	{margin:0px auto;}
 		.ax-clear	{clear:both;}
 		.ax-unit	{margin:0px 3px;}
@@ -904,6 +906,8 @@ table.ax-layout{
 		div[class*="mx-"] {display:block;}
 
 		.ax-header{
+			position: absolute;
+			opacity: 1;
 			.ax-col-8{width:50%;}
 			.ax-col-4{width:50%;}
 			.ax-logo{
@@ -1061,7 +1065,21 @@ table.ax-layout{
 			}
 		}
 	}
-
+	.ax-scroll-top{
+		position:fixed;
+		z-index:2;
+		top:0px;
+		left:0px;width:100%;
+		a{
+			display: block;
+			background: #000;color:#fff;
+			padding: 7px 5px;
+			width: 70px;
+			margin:0px auto;
+			text-align: center;
+			.util-border-radius(0px,0px,10px,10px);
+		}
+	}
 }
 
 @media @formMobile {
