@@ -1079,7 +1079,21 @@ table.ax-layout{
     z-index:2;
     top:-60px;
     left:0px;width:100%;
+
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0.3s;
+    /* Standard syntax */
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.3s;
+
     &.on{top:0px;}
+
     a{
       display: block;
       background: @color-b;color:#fff;

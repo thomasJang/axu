@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="axu.axisj.com(AXU)" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" serverName="axu.axisj.com(AXU)" uploadOnCheckin="ce4ca1a9-7d49-4a81-b95e-98f50d4d2b39" autoUploadExternalChanges="true">
     <serverData>
       <paths name="axu.axisj.com(AXU)">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="axu.axisj.com(AXU)" />
   </component>
 </project>
