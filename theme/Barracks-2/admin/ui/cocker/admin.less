@@ -605,6 +605,8 @@ a{
 		}
 	}
 }
+// 맨위로 핸들
+.ax-scroll-top{display:none;}
 
 // 반응형 폼 서식
 .ax-rwd-table {
@@ -1068,8 +1070,9 @@ table.ax-layout{
 	.ax-scroll-top{
 		position:fixed;
 		z-index:2;
-		top:0px;
+		top:-60px;
 		left:0px;width:100%;
+		&.on{top:0px;}
 		a{
 			display: block;
 			background: #000;color:#fff;

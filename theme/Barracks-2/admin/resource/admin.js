@@ -225,4 +225,13 @@ jQuery(window).resize(function() {
 // 2014-12-26 AXU, admin.js add script
 jQuery(document.body).ready(function() {
 	jQuery(document.body).append('<div class="ax-scroll-top"><a href="javascript:window.scroll(0, 0);"><i class="axi axi-ion-arrow-up-c"></i> TOP</a></div>');
+	window.scroll_top_handle = jQuery(".ax-scroll-top");
+});
+
+jQuery(window).bind("scroll", function() {
+	if(jQuery(document.body).scrollTop() > 60){
+		window.scroll_top_handle.addClass("on");
+	}else{
+		window.scroll_top_handle.removeClass("on");
+	}
 });

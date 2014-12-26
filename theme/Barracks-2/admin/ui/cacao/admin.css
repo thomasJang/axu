@@ -697,9 +697,12 @@ a:hover {
   margin-left: 16px;
 }
 #AXPage.login .ax-title {
+  position: relative;
   height: 50px;
   overflow: hidden;
   padding: 20px;
+  background: #f2f2f2;
+  z-index: 100;
 }
 #AXPage.login .ax-title h1 {
   display: block;
@@ -860,6 +863,9 @@ a:hover {
 }
 #AXPage .ax-modal-footer .ax-unit.right {
   text-align: right;
+}
+.ax-scroll-top {
+  display: none;
 }
 .ax-rwd-table {
   position: relative;
@@ -1399,11 +1405,15 @@ table.ax-layout.padding20 {
     text-align: right;
   }
   .ax-scroll-top {
+    display: block;
     position: fixed;
     z-index: 2;
-    top: 0px;
+    top: -60px;
     left: 0px;
     width: 100%;
+  }
+  .ax-scroll-top.on {
+    top: 0px;
   }
   .ax-scroll-top a {
     display: block;

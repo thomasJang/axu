@@ -503,9 +503,12 @@ a{
 	//Login Page...
 	&.login{
         .ax-title{
+          position: relative;
           height: 50px;
           overflow: hidden;
           padding:20px;
+          background: @bgcolor-a;
+          z-index: 100;
           h1{
             display:block;height: 30px;line-height:30px;float: none;
             font-size:24px; font-weight: normal; color:@color-a; text-align: center;
@@ -616,6 +619,8 @@ a{
       }
     }
 }
+// 맨위로 핸들
+.ax-scroll-top{display:none;}
 
 // 반응형 폼 서식
 .ax-rwd-table {
@@ -809,6 +814,7 @@ table.ax-layout{
 		border-collapse: separate;
 	}
 }
+
 
 @media @wide {
 }
@@ -1068,10 +1074,12 @@ table.ax-layout{
 	}
 
   .ax-scroll-top{
+    display: block;
     position:fixed;
     z-index:2;
-    top:0px;
+    top:-60px;
     left:0px;width:100%;
+    &.on{top:0px;}
     a{
       display: block;
       background: @color-b;color:#fff;

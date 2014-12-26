@@ -851,6 +851,9 @@ a:hover {
 #AXPage .ax-modal-footer .ax-unit.right {
   text-align: right;
 }
+.ax-scroll-top {
+  display: none;
+}
 .ax-rwd-table {
   position: relative;
 }
@@ -1378,9 +1381,12 @@ table.ax-layout.padding20 {
   .ax-scroll-top {
     position: fixed;
     z-index: 2;
-    top: 0px;
+    top: -60px;
     left: 0px;
     width: 100%;
+  }
+  .ax-scroll-top.on {
+    top: 0px;
   }
   .ax-scroll-top a {
     display: block;
