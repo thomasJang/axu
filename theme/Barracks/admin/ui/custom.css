@@ -10,6 +10,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.AXFormTable td {
+  padding: 5px;
+  line-height: 20px;
+}
+.AXInputLabel span {
+  line-height: 1.5em;
+}
 #AXPage.login .ax-title {
   height: 80px;
   overflow: hidden;
@@ -28,7 +35,6 @@
 }
 #AXPage.login .ax-title h1 i.axi {
   font-size: 50px;
-  color: #468cca;
 }
 #AXPage.login .ax-title .desc {
   display: block;

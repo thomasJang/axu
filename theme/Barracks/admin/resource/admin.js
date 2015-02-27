@@ -1,32 +1,47 @@
 /**
- * Created by tom on 2014. 5. 19..
+ * Barracks-2 v0.2
+ * 2014.12.26 tom : mobile > ax-scroll-top 추가
  */
 
 var topMenu_data = [
 	{_id:"m01", label:"대시보드", url:"index.html"},
-	{_id:"m02", label:"컨텐츠페이지", url:"#ax", cn:[
-		{_id:"m0201", label:"서브페이지", url:"#ax"},
-		{_id:"m0202", label:"서브페이지 두번째", url:"#ax", cn:[
-			{_id:"m020201", label:"서브페이지 1-0", url:"content.html"},
-			{_id:"m020202", label:"서브페이지 1-1", url:"content.html"},
-			{_id:"m020203", label:"서브페이지 1-2", url:"content.html"}
+	{_id:"m02", label:"<span>상품관리</span>", url:"content.html", cn:[
+		{_id:"m0201", label:"상품관리 서브 A", url:"#ax"},
+		{_id:"m0202", label:"<span>상품관리 서브 B</span>", url:"#ax", cn:[
+			{_id:"m020201", label:"상품관리 서브 B > A", url:"content.html"},
+			{_id:"m020202", label:"상품관리 서브 B > B", url:"content.html"},
+			{_id:"m020201", label:"상품관리 서브 B > C", url:"content.html"},
+			{_id:"m020202", label:"상품관리 서브 B > D", url:"content.html"},
+			{_id:"m020203", label:"상품관리 서브 B > E", url:"content.html"}
 		]},
-		{_id:"m0203", label:"서브페이지 세번째", url:"content.html"}
+		{_id:"m0203", label:"상품관리 서브 C", url:"content.html"}
 	]},
-	{_id:"m03", label:"레이아웃", url:"content.html"},
-	{_id:"m04", label:"페이지", url:"content.html"},
-	{_id:"m05", label:"사이트맵", url:"content.html"},
-	{_id:"m06", label:"모듈", url:"content.html"},
-	{_id:"m07", label:"접속통계", url:"content.html"}
+	{_id:"m03", label:"주문/배송관리", url:"content-1.html", cn:[
+		{_id:"m0301", label:"주문관리 서브 A", url:"#ax"},
+		{_id:"m0302", label:"주문관리 서브 B", url:"#ax"},
+		{_id:"m0303", label:"배송관리 서브 A", url:"content-1.html", cn:[
+			{_id:"m030301", label:"배송관리 서브 A > A", url:"content-1.html"},
+			{_id:"m030302", label:"배송관리 서브 A > B", url:"content-1.html"},
+			{_id:"m030301", label:"배송관리 서브 A > C", url:"content-1.html"},
+			{_id:"m030302", label:"배송관리 서브 A > D", url:"content-1.html"},
+			{_id:"m030303", label:"배송관리 서브 A > E", url:"content-1.html"}
+		]}
+	]},
+	{_id:"m04", label:"정산관리", url:"content-2.html"},
+	{_id:"m05", label:"판매자 정보 관리", url:"content.html"},
+	{_id:"m06", label:"공지사항", url:"content.html"},
+	{_id:"m07", label:"통계", url:"content.html"}
 ];
+
 var sideMenu_data = [
 	{label:'<i class="axi axi-windows"></i> 대시보드', url:"index.html", target:"_self"},
-	{label:'<i class="axi axi-asterisk"></i> 관리자설정', url:"content.html", target:"_self"},
-	{label:'<i class="axi axi-columns"></i> 레이아웃', url:"content.html", target:"_self"},
-	{label:'<i class="axi axi-pagelines"></i> 페이지', url:"content.html", target:"_self"},
-	{label:'<i class="axi axi-sitemap"></i> 사이트맵', url:"content.html", target:"_self"},
-	{label:'<i class="axi axi-archive"></i> 모듈', url:"content.html", target:"_self"},
-	{label:'<i class="axi axi-bar-chart-o"></i> 접속통계', url:"content.html", target:"_self"}
+	{label:'<i class="axi axi-asterisk"></i> 설정', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-columns"></i> 사이드메뉴 A', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-pagelines"></i> 사이드메뉴 B', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-sitemap"></i> 사이드메뉴 C', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-archive"></i> 사이드메뉴 D', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-line-chart"></i> 사이드메뉴 E', url:"content.html", target:"_self"},
+	{label:'<i class="axi axi-line-chart"></i> 사이드메뉴 F', url:"content.html", target:"_self"}
 ];
 
 var topMenu = new AXTopDownMenu();
@@ -34,19 +49,27 @@ var mobileMenu = new AXMobileMenu();
 var loginInfoModal = new AXMobileModal();
 var fcObj = {
 	pageStart: function(){
-		fcObj.bindEvent();
-		fcObj.bindTopMenu();
-		fcObj.bindSideMenu();
+
+		// ax-header가 존재 하는 경우
+		if(jQuery(".ax-header").get(0)) {
+			fcObj.bindEvent();
+			fcObj.bindTopMenu();
+			fcObj.bindSideMenu();
+		}
+
 		try {
 			fnObj.pageStart();
 		}catch(e){
 
 		}
+		this.theme.init();
 	},
 	pageResize: function(){
 		fcObj.setAsideMenu();
 	},
 	setAsideMenu: function(){
+		if(!jQuery(".ax-aside").get(0)) return;
+
 		if(!jQuery(".ax-aside-box").data("status")){
 			if(axf.clientWidth() <= 1024 && axf.clientWidth() >= 767){
 				jQuery(".ax-aside-menu").addClass("on");
@@ -162,7 +185,60 @@ var fcObj = {
 		}
 		_target.empty();
 		_target.append(po.join(''));
+	},
+
+	theme: {
+		sel: null,
+		init: function(){
+			var themes = [
+				["cocker","cocker"],
+				["cocker-dark","bulldog"],
+				["cocker-dark-red","cocker"],
+				["cacao","kakao"],
+				["cacao-dark","kakao"]
+			];
+			var po = [];
+			$.each(themes, function(){
+				po.push('<option value="', this[0],'/', this[1],'">', this[0],'</option>');
+			});
+			fcObj.theme.sel = jQuery("#theme-select");
+			fcObj.theme.sel.html( po.join('') );
+
+			var _theme;
+			if((_theme = axf.getCookie("axutheme"))){
+				fcObj.theme.sel.val(_theme);
+				fcObj.theme.change(_theme);
+			}
+			fcObj.theme.sel.bind("change", function(e) {
+				fcObj.theme.change(e.target.value);
+			});
+		},
+		change: function(theme){
+			var t = theme.split("/");
+			jQuery("#axu-theme-admin").attr("href", "ui/"+t[0]+"/admin.css");
+			jQuery("#axu-theme-axisj").attr("href", "http://cdn.axisj.com/axisj/ui/"+ t[1] +"/AXJ.min.css?v="+axf.timekey());
+			axf.setCookie("axutheme", theme);
+		}
 	}
 };
-jQuery(document).ready(fcObj.pageStart.delay(0.1));
-jQuery(window).resize(fcObj.pageResize);
+
+jQuery(document.body).ready(function() {
+	fcObj.pageStart()
+});
+jQuery(window).resize(function() {
+	fcObj.pageResize();
+});
+
+// 2014-12-26 AXU, admin.js add script
+jQuery(document.body).ready(function() {
+	jQuery(document.body).append('<div class="ax-scroll-top"><a href="javascript:window.scroll(0, 0);"><i class="axi axi-ion-arrow-up-c"></i> TOP</a></div>');
+	window.scroll_top_handle = jQuery(".ax-scroll-top");
+});
+
+jQuery(window).bind("scroll", function() {
+	if(jQuery(document.body).scrollTop() > 60){
+		window.scroll_top_handle.addClass("on");
+	}else{
+		window.scroll_top_handle.removeClass("on");
+	}
+});
