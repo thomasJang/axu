@@ -20,7 +20,7 @@
 @bgcolor-a	:#f2f2f2;		//Light Gray
 @bgcolor-b	:#444;			//Dark Gray
 @bgcolor-c	:#858585; 		//Middle Gray
-@bgcolor-d	:#523636;		//Blue 
+@bgcolor-d	:#523636;		//Blue
 
 @border		:1px solid #d9d9d9;		//Light Gray
 @border-a	:3px solid #858585; 	//Profile border Gray
@@ -120,11 +120,11 @@ a{
 	.ax-wrap 	{margin:0px auto;}
 	.ax-clear	{clear:both;}
 	.ax-unit	{margin:0px 10px;}
-	.ax-col		{float:left;}		
+	.ax-col		{float:left;}
 	div[class*="ax-col-"] {float:left; height: inherit;}
-	.ax-col-1	{width:8.3334%;}	
-	.ax-col-2	{width:16.6667%}		
-	.ax-col-3	{width:25%}			
+	.ax-col-1	{width:8.3334%;}
+	.ax-col-2	{width:16.6667%}
+	.ax-col-3	{width:25%}
 	.ax-col-4	{width:33.3334%; }
 	.ax-col-5 	{width:41.6667%;}
 	.ax-col-6	{width:50%;}
@@ -134,9 +134,9 @@ a{
 	.ax-col-10 	{width:83.3334%}
 	.ax-col-11	{width:91.6667%}
 	.ax-col-12	{width:100%}
-	
+
 	div[class*="mx-"] {display: none;}
-	
+
 	.ax-header{
         z-index:300;
 		border-bottom:@border;
@@ -145,7 +145,7 @@ a{
 		background: @bgcolor;
 		//background: #523636;
 		opacity: 0.95;
-		
+
 		.ax-logo{
 			position: absolute;
 			margin-top:6px;
@@ -156,7 +156,7 @@ a{
 				height:45px;
 				display: inline-block;
 				text-decoration: none;
-				
+
 				.logo-img{
 					display: block;float: left;
 					line-height: 45px;
@@ -179,13 +179,13 @@ a{
 					line-height: 45px;
 				}
 			}
-			
+
 			/*
 			line-height:45px;margin-top:8px;
 			a.logo-icon{
 				color: @color-b;
 				text-decoration: none;
-				font-size:45px;	
+				font-size:45px;
 				i.axi{
 					padding:5px;
 					font-size:35px;
@@ -279,15 +279,15 @@ a{
 
 		.ax-loginfo{
             height: 60px;
-			line-height: 60px; 
+			line-height: 60px;
 			list-style: none;
 			margin:0px; padding:0px;
-			float:right;			
+			float:right;
 			li{
-				display: inline; 
+				display: inline;
 				vertical-align: middle;
 				&.profile{
-					.photo{ 
+					.photo{
 						display: block;
 						float:left;
 						width:34px; height:34px; background: url('images/profile.png') no-repeat 50%;
@@ -295,15 +295,15 @@ a{
 						.util-border-radius(34px, 34px, 34px, 34px);
 						border:@border-a; //3px
 						margin-top:10px;
-					}	
+					}
 				}
 				&.account{
 					color:@color-a;
 					font-weight: bold;
-					padding:0px 10px; 
+					padding:0px 10px;
 				}
 				&.lang{
-					padding:0px 20px;	
+					padding:0px 20px;
 				}
 			}
 		}
@@ -377,7 +377,7 @@ a{
                 }
               }
             }
-            
+
             .ax-content-toolbox{
             	padding:4px 5px;line-height:36px;
             	border-bottom:@border-b;
@@ -386,9 +386,9 @@ a{
             .ax-box-wrap{
               margin:20px;
             }
-            
+
             .ax-tab{
-	          margin: 10px;  
+	          margin: 10px;
             }
 
             /* 페이지 검색바 */
@@ -421,7 +421,7 @@ a{
 				padding-left:0px;
 			}
 		}
-		
+
 	}
 
     /* 페이지 좌측 메뉴용 */
@@ -430,7 +430,7 @@ a{
       width:260px;left: 0px;top:130px;
       padding-bottom:50px;
       z-index:200;
-      
+
       .ax-aside-menu-box{
         position: absolute;
         left: 0px;top:-53px;
@@ -461,8 +461,8 @@ a{
         .ax-box{
           width:100%;
           background:@bgcolor;
-          border:@border-b;  
-			
+          border:@border-b;
+
           .util-border-radius(6px, 6px, 6px, 6px);
           .util-drop-shadow (0px, 0px, 2px, 0, 0.05);
 			overflow: hidden;
@@ -532,13 +532,13 @@ a{
     }
 	.ax-footer{
         z-index:200;
-		height:40px; position: fixed; width: 100%; bottom:0px; 
+		height:40px; position: fixed; width: 100%; bottom:0px;
 		line-height: 40px;
 		border-top:@border;
 		background: @bgcolor;
 		.ax-version{
 			list-style: none;
-			margin:0px; padding:0px; 
+			margin:0px; padding:0px;
 			li{float:left; margin-right:16px;}
 		}
 		.ax-funcs{
@@ -548,7 +548,7 @@ a{
 			li{float:left; margin-left:16px;}
 		}
 	}
-	
+
 	//Login Page...
 	&.login{
         .ax-title{
@@ -574,14 +574,14 @@ a{
 			h1	{text-align: center; color:@color-b; font-weight: normal;}
 			p	{text-align: center; color:@color; margin:0px;}
 			.ax-input	{
-				display: block; 
+				display: block;
 				padding:4px 20px;
 				.name 	{display: none;}
-				.AXInput	{width:100px; width:100%; height:40px; padding:0px; text-indent: 10px;}
+				.AXInput	{width:100px; width:100%; height:40px; line-height:40px;/* ie8 lte */ padding:0px; text-indent: 10px;}
 			}
 			.ax-funcs{
 				padding:4px 20px;
-			
+
 				.AXCheckbox	{
 					float:left;
 					label{padding:0px !important;}
@@ -635,12 +635,12 @@ a{
       border:@border-b;
       .util-border-radius(6px, 6px, 6px, 6px);
       .util-drop-shadow (0px, 0px, 2px, 0, 0.05);
-		
+
 		H3{
 			color:#616161;
 			margin:10px 10px;
 		}
-		
+
 		.tree-in-form{
 			height:400px;
 			border:@border-c;
@@ -653,7 +653,7 @@ a{
 		.buttons-in-form{
 			padding:5px;
 		}
-      
+
     }
     .ax-modal-footer{
       padding:10px;
@@ -769,7 +769,7 @@ a{
 						width:100px;
 					}
 					span.td{
-						
+
 					}
 				    input[type=text], input[type=password], .AXInput, select, textarea{
 				      width:100%;height:25px;
@@ -953,11 +953,11 @@ table.ax-layout{
 		.ax-wrap 	{margin:0px auto;}
 		.ax-clear	{clear:both;}
 		.ax-unit	{margin:0px 10px;}
-		.ax-col		{float:left;}		
+		.ax-col		{float:left;}
 		div[class*="ax-col-"] {float:left; height: inherit;}
-		.ax-col-1	{width:8.3334%;}	
-		.ax-col-2	{width:16.6667%}		
-		.ax-col-3	{width:25%}			
+		.ax-col-1	{width:8.3334%;}
+		.ax-col-2	{width:16.6667%}
+		.ax-col-3	{width:25%}
 		.ax-col-4	{width:33.3334%; }
 		.ax-col-5 	{width:41.6667%;}
 		.ax-col-6	{width:50%;}
@@ -985,9 +985,9 @@ table.ax-layout{
               }
             }
 		}
-		
-		
-		
+
+
+
 		.ax-body{
             .ax-title{
             	h1{
@@ -1031,11 +1031,11 @@ table.ax-layout{
 		.ax-wrap 	{margin:0px auto;}
 		.ax-clear	{clear:both;}
 		.ax-unit	{margin:0px 3px;}
-		.ax-col		{float:left;}		
+		.ax-col		{float:left;}
 		div[class*="ax-col-"] {float:left; height: inherit;}
-		.ax-col-1	{width:100%}	
-		.ax-col-2	{width:100%}		
-		.ax-col-3	{width:100%}			
+		.ax-col-1	{width:100%}
+		.ax-col-2	{width:100%}
+		.ax-col-3	{width:100%}
 		.ax-col-4	{width:100%}
 		.ax-col-5 	{width:100%}
 		.ax-col-6	{width:100%}
@@ -1052,7 +1052,7 @@ table.ax-layout{
             position: absolute;
           opacity: 1;
 			.ax-col-8{width:50%;}
-			.ax-col-4{width:50%;}			
+			.ax-col-4{width:50%;}
 			.ax-logo{
 				z-index: -1;
 				position: absolute;
@@ -1087,7 +1087,7 @@ table.ax-layout{
 					color:@color-b;
 				}
 			}
-			
+
 		}
 		.ax-body{
 
@@ -1128,8 +1128,8 @@ table.ax-layout{
               }
             }
 		}
-	
-	
+
+
 		.ax-aside{
 			display: none;
 			&.ax-aside-open{
@@ -1137,7 +1137,7 @@ table.ax-layout{
 				width:100%;left: 0px;top:62px;
 				padding-bottom:50px;
 				z-index:200;
-				display:block;		      
+				display:block;
 				.ax-aside-menu-box{
 					display:none;
 				}
@@ -1150,7 +1150,7 @@ table.ax-layout{
 		}
 
 		.ax-footer{
-			display: none; 
+			display: none;
 		}
 		&.login{
 			.ax-box {
@@ -1187,7 +1187,7 @@ table.ax-layout{
 		.buttons-in-form{
 			padding:5px;
 		}
-      
+
     }
     .ax-modal-footer{
       padding:10px;
@@ -1258,7 +1258,7 @@ table.ax-layout{
 	.bodyNodeIcon.userHtml{
 		.axi{
 			font-size:14px;
-			line-height: inherit;			
+			line-height: inherit;
 		}
 	}
 }
@@ -1266,8 +1266,8 @@ table.ax-layout{
 .ax-top-menu.AXMenuBox{
 		.axi{
 			font-size:14px;
-			line-height: inherit;			
-		}	
+			line-height: inherit;
+		}
 }
 
 .W350{width:350px;}
