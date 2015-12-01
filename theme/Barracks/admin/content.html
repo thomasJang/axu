@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="http://cdno.axisj.com/axisj/ui/kakao/AXJ.min.css" id="axu-theme-axisj" />
 
     <script type="text/javascript" src="http://cdno.axisj.com/axisj/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdno.axisj.com/axisj/dist/AXJ.min.js"></script>
+    <script type="text/javascript" src="http://cdno.axisj.com/axisj/dist/AXJ.all.js"></script>
 
     <link rel="stylesheet" href="ui/cacao/admin.css" id="axu-theme-admin" />
     <link rel="stylesheet" href="ui/custom.css" />
@@ -195,7 +195,7 @@
                                 ],
                                 onChange: function(selectedObject, value){
                                     //아래 3개의 값을 사용 하실 수 있습니다.
-                                    //dialog.push(Object.toJSON(this));
+                                    //dialog.push();
                                     //dialog.push(Object.toJSON(selectedObject));
                                     //dialog.push(value);
                                 }
@@ -207,7 +207,7 @@
                                 AXBind:{
                                     type:"select", config:{
                                         onChange:function(){
-                                            //toast.push(Object.toJSON(this));
+                                            //toast.push();
 
                                         }
                                     }
@@ -221,7 +221,7 @@
                                     type:"twinDate", config:{
                                         align:"right", valign:"top", startTargetID:"inputText1",
                                         onChange:function(){
-                                            toast.push(Object.toJSON(this));
+
                                         }
                                     }
                                 }
