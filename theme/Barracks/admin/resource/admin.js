@@ -216,7 +216,7 @@ var fcObj = {
 		change: function(theme){
 			var t = theme.split("/");
 			jQuery("#axu-theme-admin").attr("href", "ui/"+t[0]+"/admin.css");
-			jQuery("#axu-theme-axisj").attr("href", "http://cdn.axisj.com/axisj/ui/"+ t[1] +"/AXJ.min.css?v="+axf.timekey());
+			jQuery("#axu-theme-axisj").attr("href", "http://cdno.axisj.com/axisj/ui/"+ t[1] +"/AXJ.min.css?v="+axf.timekey());
 			axf.setCookie("axutheme", theme);
 		}
 	}
