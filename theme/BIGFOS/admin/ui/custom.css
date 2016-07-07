@@ -1,0 +1,196 @@
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AXGridTable td {
+  padding: 5px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AXFormTable td {
+  padding: 5px;
+  line-height: 20px;
+}
+.AXInputLabel span {
+  line-height: 1.5em;
+}
+#AXPage.login .ax-title {
+  height: 80px;
+  overflow: hidden;
+  padding: 20px;
+}
+#AXPage.login .ax-title h1 {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  float: none;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+#AXPage.login .ax-title h1 i.axi {
+  font-size: 50px;
+}
+#AXPage.login .ax-title .desc {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  float: none;
+  text-align: center;
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  color: #888;
+}
+/* 페이지 좌측 메뉴용 */
+#AXPage .ax-aside .ax-aside-box i.axi {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: #333333;
+  color: #fff;
+  border: 1px solid #c8c8c8;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#AXPage .ax-aside .ax-aside-box h3 {
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  margin: 0px;
+  padding: 7px 0px;
+  background: #c9c9b5;
+}
+#AXPage .ax-aside .ax-aside-box h3 a {
+  margin: 0px 5px;
+  cursor: pointer;
+}
+#AXPage .ax-aside .ax-aside-box h3 a.on {
+  font-weight: bold;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-box-wrap {
+  margin: 20px;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent {
+  position: relative;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent a {
+  color: #333;
+  display: block;
+  padding: 7px 10px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent a:hover,
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent a:focus {
+  background: #f3f3f3;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent a i.axi {
+  background: #1AB394;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent a .is-on {
+  padding-top: 10px;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent.on a {
+  background: #f3f3f3;
+  color: #1AB394;
+  text-decoration: none;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent.on a .is-on {
+  color: #1AB394;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent .is-on {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  line-height: 20px;
+  padding: 7px 10px;
+  color: #333;
+  font-family: axicon;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent .is-on:after {
+  content: "\f12f";
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent.open {
+  background: #f3f3f3;
+  border-bottom: 0px none !important;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent.open a {
+  border-bottom: 1px solid #d9d9d9;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul li.parent.open a .is-on:after {
+  content: "\f199";
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child {
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  display: none;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child.on {
+  display: block;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child.sub_child {
+  border-top: 0px none;
+  padding: 0px 0px;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child {
+  list-style: none;
+  border-bottom: 0px none !important;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child a {
+  padding-left: 15px;
+  text-decoration: none;
+  color: #616161;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child a:hover,
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child a:focus {
+  color: #1AB394;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.on a,
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.open a {
+  color: #1AB394;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.sub_child a {
+  background: #fff;
+  font-weight: normal;
+  padding: 0px 0px;
+  padding-left: 20px;
+  font-size: 11px;
+  border-bottom: 0px none;
+  color: #616161;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.sub_child a:hover,
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.sub_child a:focus {
+  color: #1AB394;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.sub_child.on a {
+  color: #1AB394;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.sub_child:first-child a {
+  padding-top: 5px;
+}
+#AXPage .ax-aside .ax-aside-box .ax-box .ax-aside-ul ul.child li.child.sub_child:last-child a {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
